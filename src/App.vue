@@ -1,4 +1,6 @@
 <script>
+import { api } from './data/index'
+import { store } from './data/store'
 export default {
 
 }
