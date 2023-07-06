@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <h1>Prova!</h1>
+  <h1 class="text-danger">Prova!</h1>
 </template>
 
 <style lang="scss"></style>
