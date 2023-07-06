@@ -20,3 +20,5 @@ export default {
     <button type="submit">{{ submitLabel || 'Cerca' }}</button>
   </form>
 </template>
+
+<style lang="scss" scoped></style>

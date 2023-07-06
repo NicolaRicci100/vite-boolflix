@@ -1,14 +1,27 @@
 <script>
 import SearchBar from './SearchBar.vue'
 export default {
-  components: { SearchBar }
+  components: { SearchBar },
+  data() {
+    return {
+      titleFilter: ''
+    }
+  },
+  methods: {
+    setTitleFilter(term) {
+      this.titleFilter = term;
+    },
+    searchMovie() {
+      console.log(this.titleFilter);
+    }
+  }
 };
 </script>
 
 <template>
   <nav class="d-flex">
     <h1>Boolflix</h1>
-    <SearchBar />
+    <SearchBar @term-change="setTitleFilter" @form-submit="searchMovie" />
   </nav>
 </template>
 
