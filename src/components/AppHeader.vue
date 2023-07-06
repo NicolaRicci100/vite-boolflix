@@ -19,10 +19,12 @@ export default {
 </script>
 
 <template>
-  <nav class="d-flex">
+  <nav class="d-flex justify-content-between">
     <h1>Boolflix</h1>
     <SearchBar @term-change="setTitleFilter" @form-submit="searchMovie" />
   </nav>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../assets/scss/style.scss';
+</style>

@@ -1,9 +1,9 @@
 <script>
 import { api } from './data/index'
 import { store } from './data/store'
-import { AppHeader } from './components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue'
 export default {
-  components: { AppHeader }
+  components: { AppHeader },
 }
 </script>
 

@@ -21,4 +21,6 @@ export default {
   </form>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '../assets/scss/style.scss';
+</style>
