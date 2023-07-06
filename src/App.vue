@@ -10,4 +10,6 @@ export default {
   <h1 class="text-danger">Prova!</h1>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use './assets/scss/style.scss';
+</style>
