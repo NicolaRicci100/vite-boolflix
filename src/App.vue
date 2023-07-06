@@ -1,13 +1,14 @@
 <script>
 import { api } from './data/index'
 import { store } from './data/store'
+import { AppHeader } from './components/AppHeader.vue'
 export default {
-
+  components: { AppHeader }
 }
 </script>
 
 <template>
-  <h1 class="text-danger">Prova!</h1>
+  <AppHeader />
 </template>
 
 <style lang="scss">
