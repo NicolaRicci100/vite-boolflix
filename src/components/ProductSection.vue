@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-  <ul>
+  <!-- <ul>
     <li>{{ productType.title || productType.name }}</li>
     <li>{{ productType.original_title || productType.original_name }}</li>
     <li class="flag">
@@ -42,7 +42,12 @@ export default {
       <i v-for="n in 5" :key="n" :class="starVote(n)" class="fa-star"></i>
     </li>
     <li class="poster"><img :src="posterPath" :alt="productType.title || productType.name"></li>
-  </ul>
+  </ul> -->
+
+
+  <figure class="poster">
+    <img :src="posterPath" :alt="productType.title || productType.name">
+  </figure>
 </template>
 
 <style lang="scss" scoped>
@@ -55,10 +60,17 @@ export default {
   }
 }
 
+figure {
+  height: 400px;
+  width: 300px;
+}
+
 .poster {
   img {
-    height: 200px;
-    width: auto
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 }
 </style>
