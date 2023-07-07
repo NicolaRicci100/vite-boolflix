@@ -15,11 +15,11 @@ export default {
 <template>
   <div id="content">
     <h2>Film</h2>
-    <section id="movies" class="d-flex flex-wrap justify-content-evenly">
+    <section id="movies" class="d-flex flex-wrap justify-content-start">
       <ProductSection v-for="movie in store.movies" :key="movie.id" :productType="movie" />
     </section>
     <h2>Serie</h2>
-    <section id="series">
+    <section id="series" class="d-flex flex-wrap justify-content-start">
       <ProductSection v-for="serie in store.series" :key="serie.id" :productType="serie" />
     </section>
   </div>
@@ -32,6 +32,6 @@ export default {
   height: 90vh;
   overflow-y: auto;
   padding: 20px;
-  background-color: gray;
+  background-color: lightgray;
 }
 </style>
