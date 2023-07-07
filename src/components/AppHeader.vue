@@ -42,12 +42,18 @@ export default {
 </script>
 
 <template>
-  <nav class="d-flex justify-content-between">
-    <h1>Boolflix</h1>
-    <SearchBar @term-change="setTitleFilter" @form-submit="searchProduct" />
+  <nav id="navbar" class="bg-dark d-flex justify-content-between align-items-center">
+    <h1 class="text-danger">BOOLFLIX</h1>
+    <SearchBar @term-change="setTitleFilter" @form-submit="searchProduct" :placeholder="'Cosa vuoi guardare?'" />
   </nav>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/scss/style.scss';
+
+#navbar {
+  height: 10vh;
+  position: sticky;
+  padding: 20px;
+}
 </style>
