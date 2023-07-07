@@ -1,5 +1,4 @@
 <script>
-import axios from 'axios';
 import ProductSection from './ProductSection.vue';
 import { store } from '../data/store';
 export default {
