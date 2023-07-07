@@ -1,4 +1,6 @@
 <script>
+import axios from 'axios';
+import { poster } from '../data/index';
 export default {
   props: {
     productType: Object
@@ -11,6 +13,18 @@ export default {
     srcFlag() {
       const url = new URL(`../assets/img/${this.productType.original_language}.png`, import.meta.url)
       return url.href;
+    },
+    posterPath() {
+      if (!this.productType.poster_path) return poster.placeholder;
+      return poster.prefix + this.productType.poster_path;
+    },
+    vote() {
+      return Math.ceil(this.productType.vote_average / 2);
+    }
+  },
+  methods: {
+    starVote(n) {
+      return n <= this.vote ? 'fas' : 'far';
     }
   }
 }
@@ -20,19 +34,31 @@ export default {
   <ul>
     <li>{{ productType.title || productType.name }}</li>
     <li>{{ productType.original_title || productType.original_name }}</li>
-    <li>
+    <li class="flag">
       <img v-if="isFlag" :src="srcFlag" :alt="productType.original_language">
       <span v-else>{{ productType.original_language }}</span>
     </li>
-    <li>{{ productType.vote_average }}</li>
+    <li>
+      <i v-for="n in 5" :key="n" :class="starVote(n)" class="fa-star"></i>
+    </li>
+    <li class="poster"><img :src="posterPath" :alt="productType.title || productType.name"></li>
   </ul>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/scss/style.scss';
 
-img {
-  height: 20px;
-  width: 30px;
+.flag {
+  img {
+    height: 20px;
+    width: 30px;
+  }
+}
+
+.poster {
+  img {
+    height: 200px;
+    width: auto
+  }
 }
 </style>
