@@ -1,6 +1,6 @@
 const api = {
   baseUri: 'https://api.themoviedb.org/3',
-  key: 'b7fa15f0119ab71715548eda396dd041',
+  key: 'fcabe023c67ccdee6fbc3c96d113e75a',
   language: 'it-IT'
 }
 const poster = {
